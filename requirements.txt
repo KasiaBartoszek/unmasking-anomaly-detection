@@ -1,5 +1,7 @@
-opencv-python
-numpy
+opencv-python~=4.5.2.54
+numpy~=1.19.2
 tensorflow
-keras
-scikit-learn
+keras~=2.0.8
+scikit-learn~=0.24.2
+matplotlib~=3.3.4
+h5py~=2.10.0
