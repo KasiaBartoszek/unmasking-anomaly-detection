@@ -17,7 +17,7 @@ class VGG16Convolutions:
 
 
     def __VGG16_convolutions(self):
-        model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3)) #chuju
+        model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
         return model
 
 
