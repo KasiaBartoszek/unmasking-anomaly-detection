@@ -6,7 +6,7 @@ class FrameLoader:
 
     def load_frames_from_dir(self, path: str, extension: str) -> list:
         cv_img = []
-        for img in glob.glob(f"{path}/*.{extension}", recursive=True):
+        for img in glob.glob(f"{path}/**/*.{extension}", recursive=True):
             n = cv2.imread(img)
             cv_img.append(n)
 

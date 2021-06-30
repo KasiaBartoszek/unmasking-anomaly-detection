@@ -26,7 +26,7 @@ def run(args):
     feature_extractor = FeatureExtractor()
     normal_frames, abnormal_frames = frame_loader.divide_frames_into_batches(frames)
     motion_normal_bins, motion_abnormal_bins = feature_extractor.extract_motion_features(normal_frames, abnormal_frames)
-    # appearance_normal, appearance_abnormal = feature_extractor.extract_appearance_features(normal_frames, abnormal_frames)
+    appearance_normal, appearance_abnormal = feature_extractor.extract_appearance_features(normal_frames, abnormal_frames)
     unmasking_algorithm = UnmaskingAlgorithm(motion_normal_bins, motion_abnormal_bins)
     results = unmasking_algorithm.run(args.k, args.m)
     final_scores = unmasking_algorithm.get_final_scores(motion_normal_bins + motion_abnormal_bins)
